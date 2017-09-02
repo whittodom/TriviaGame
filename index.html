@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<title>Trivia Game</title>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">	
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<!--start game button-->
+				<div class="jumbotron">
+					<h1>Trivia Questions!</h1>
+					<div id="trivia"></div>
+					<div id="start-button"></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<!--form for questions-->
+				<div class="jumbotron">
+					<!--TIMER-->
+					<div id="timer"></div>
+					<!--creat this dynamically-->
+					<div>					
+					<form>
+					<p id="question"></p>
+					<label class="radio-inline">
+						<input type="radio" name="optradio" id="answer-a">
+						<span id="answer-a"></span>
+					</label>
+					<label class="radio-inline">
+						<input type="radio" name="optradio" id="answer-b">
+						<span id="answer-b"></span>						
+					</label>
+					<label class="radio-inline">
+						<input type="radio" name="optradio" id="answer-c">
+						<span id="answer-c"></span>						
+					</label>
+					<label class="radio-inline">
+						<input type="radio" name="optradio" id="answer-d">
+						<span id="answer-d"></span>						
+					</label>
+					</form>
+					<button type="submit" class="btn btn-default" id="next-button">Next!</button>
+					</div>
+					<!--end of section-->
+				</div>	
+			</div>
+		</div>
+	</div>
+<script type="text/javascript" src="assets/javascript/app.js"></script>	
+</body>
+</html>
