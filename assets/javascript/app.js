@@ -19,7 +19,20 @@ $(document).ready(function() {
 
 	//Display current question & answer choices
 	function questionScreen(){
-		$("#question").append("triviaQuestions[i]")
+		$("trivia").empty().append();
+
+
+		$("#question").append("triviaQuestions[i]")		
+
+		for (i=0; i<triviaQuestions.length; i++){
+		
+
+			var radioBtn = $('<input type = "radio" name="optradio"/>');
+			radioBtn.append("#answers");
+		}
+
+		$("#next-button").append("<button>").addClass("btn btn-default").attr("id", "next-button").text("Next");
+
 		startCountdown();
 	}
 
@@ -35,9 +48,13 @@ $("#start-button").on("click", function(){
 	});
 
 
-//Display trivia & correct / incorrect / 	
-function submitAnswer(){	
-}
+//Display trivia & correct / incorrect / 
+	$("radio").on("click", function(){
+		
+		
+		score();
+
+	});	
 
 
 
@@ -75,15 +92,15 @@ function stopCountdown(){
 
 //FUNCTION -- pause (5 sec)
 
-//create form
-//$("#question").html("<P>" + question + "</p>") //add class
-//$("#answer").html("<p>" + answers + "</p>") //add class
 
 		
 	//record answer choice (if correct/incorrect), populate new question & answer	
 	// function storeUserAnswers(){
 
 	// }	
+
+//Function -- check answer choices
+
 
 function score(){
 	//display:	
